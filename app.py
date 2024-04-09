@@ -3,7 +3,6 @@ from flask import Flask, render_template, redirect, url_for, session, request
 from flask_oauthlib.client import OAuth
 import razorpay
 import os
-import secrets
 
 load_dotenv()
 
