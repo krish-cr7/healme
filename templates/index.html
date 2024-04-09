@@ -71,8 +71,11 @@
 
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <script>
+         var razorpay_key = "{{ razorpay_key }}";
+
+
         var options = {
-            "key": "rzp_test_jAKTpiGwNQTDOD",
+            "key": razorpay_key,
             "amount": 50000,
             "currency": "INR",
             "name": "Acme Corp",

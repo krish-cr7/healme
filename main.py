@@ -59,11 +59,12 @@ def get_google_oauth_token():
 def pay():
     if request.form.get("amount") != "":
         # amount=request.form.get("amt")
+        razorpay_key = os.environ.get('RAZORPAY_KEY_ID')
         amount = 50000
         data = { "amount": 50000, "currency": "INR", "receipt": "order_rcptid_11" }
         payment = razorpay_client.order.create(data=data)
         pdata=[amount, payment["id"]]
-        return render_template("index.html", pdata=pdata)
+        return render_template("index.html", pdata=pdata, razorpay_key=razorpay_key)
     return redirect("/form")
 
 @app.route('/success', methods=["POST"])
