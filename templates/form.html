@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        /* Base styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        label {
+            font-size: 1rem;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            font-size: 1rem;
+        }
+
+        /* Media queries */
+        @media only screen and (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.3rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            label {
+                font-size: 0.9rem;
+            }
+
+            input[type="text"] {
+                font-size: 0.9rem;
+            }
+
+            button[type="submit"] {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="/pay" method="post">
+            <h1>Before we begin, let's set some expectations.</h1>
+            <p>This space is designed for open expression and genuine exchange of energies.</p>
+            <p>This session is completely separate from astrology or tarot card reading. It’s about creating a safe environment where you can freely share and receive guidance, from my learnings during my spiritual journey.</p>
+            <label for="agree-checkbox">
+                <input type="checkbox" id="agree-checkbox"> I agree to the terms and conditions
+            </label>
+            <p>Type your name please:</p>
+            <input type="text" name="amt" id="amount-input">
+            <button type="submit" id="submit-button" disabled>Let's Begin</button>
+        </form>
+    </div>
+
+    <script>
+        // Get the checkbox and button elements
+        var checkbox = document.getElementById('agree-checkbox');
+        var amountInput = document.getElementById('amount-input');
+        var submitButton = document.getElementById('submit-button');
+
+        // Add event listener to the checkbox
+        checkbox.addEventListener('change', function() {
+            // Enable the button if the checkbox is checked and amount is provided
+            submitButton.disabled = !(this.checked && amountInput.value !== "");
+        });
+
+        // Add event listener to the amount input
+        amountInput.addEventListener('input', function() {
+            // Enable the button if the checkbox is checked and amount is provided
+            submitButton.disabled = !(checkbox.checked && this.value !== "");
+        });
+    </script>
+</body>
+</html>

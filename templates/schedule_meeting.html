@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Meeting</title>
+    <style>
+        /* Loading spinner styles */
+        .loading-spinner {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 6px solid #f3f3f3; /* Light grey */
+            border-top: 6px solid #3498db; /* Blue */
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s linear infinite;
+            z-index: 9999;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading spinner -->
+    <div class="loading-spinner" id="loading-spinner"></div>
+
+    <h2>Schedule a Meeting</h2>
+    
+    <!-- Calendly inline widget begin -->
+    <div class="calendly-inline-widget" data-url="https://calendly.com/krishnakriti711/30min" style="min-width:320px;height:700px;"></div>
+    <!-- Calendly inline widget end -->
+
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <script>
+        // Display loading spinner
+        document.addEventListener('DOMContentLoaded', function() {
+            var loadingSpinner = document.getElementById('loading-spinner');
+            loadingSpinner.style.display = 'block';
+
+            // Hide loading spinner once Calendly has finished loading
+            window.onload = function() {
+                loadingSpinner.style.display = 'none';
+                // Display alert for successful payment
+                alert('Payment was successful!');
+            };
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('your-image.jpg'); /* Replace 'your-image.jpg' with your actual image file */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.content {
+    padding: 20px;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .content {
+        padding: 10px;
+    }
+}
+
+/* Additional adjustments for even smaller screens */
+@media (max-width: 480px) {
+    .content {
+        padding: 5px;
+    }
+}

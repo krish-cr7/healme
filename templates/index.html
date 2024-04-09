@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acme Corp Payment Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #5cffab;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #4bd391;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 1.3rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            button {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Acme Corp Payment Page</h1>
+        <p>Please read through the information below before proceeding with your payment:</p>
+        <p>This page is designed for processing payments securely. By clicking the "Pay with Razorpay" button below, you will initiate a test transaction for demonstration purposes.</p>
+        <p>Fill in the necessary details and click the button to proceed with the payment.</p>
+
+        <button id="rzp-button1">Pay with Razorpay</button>
+    </div>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+        var options = {
+            "key": "rzp_test_jAKTpiGwNQTDOD",
+            "amount": 50000,
+            "currency": "INR",
+            "name": "Acme Corp",
+            "description": "Test Transaction",
+            "image": "https://example.com/your_logo",
+            "order_id": "{{pdata[1]}}",
+            "callback_url": "/success",
+            "prefill": {
+                "name": "Gaurav Kumar",
+                "email": "gaurav.kumar@example.com",
+                "contact": "9000090000"
+            },
+            "notes": {
+                "address": "Razorpay Corporate Office"
+            },
+            "theme": {
+                "color": "#5cffab"
+            }
+        };
+
+        var rzp1 = new Razorpay(options);
+        document.getElementById('rzp-button1').onclick = function(e){
+            rzp1.open();
+            e.preventDefault();
+        }
+    </script>
+</body>
+</html>
