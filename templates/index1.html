@@ -5,10 +5,11 @@
   <title>Space Globe - Three.js</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet"> <!-- Link to your custom style.css file -->
+  <link href="../static/css/style.css" rel="stylesheet"> <!-- Link to your custom style.css file -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="./testimony.js"></script>
+  <script src="../static/js/testimony.js"></script>
+
 
   <style>
     body {
@@ -33,7 +34,7 @@
       <div class=" text-center fonthead text-white py-24 font-bold text-5xl">Let the<br>Healing Begin</div>
       <div class="text-center fontpara bottom-text text-white pt-96  text-2xl">adsfvadfaf dvaf </div>
       <div class="relative  pt-20 fontpara text-center text-white  text-3xl ">
-        <button class="pointer-events-auto" style="background-color: rgba(132, 86, 235, 0.4); border-radius: 32px;">
+        <button class="pointer-events-auto" style="background-color: rgba(132, 86, 235, 0.4); border-radius: 32px;" data-login-url="/login">
           Book a Session
         </button>
       </div>
@@ -45,7 +46,7 @@
         Hello Beautiful<br>people
       </div>
       <div class="flex justify-center pt-20"> <!-- Center align the image -->
-        <img  src="./assets/Dewanshu.png" alt="Profile photo">
+        <img  src="../static/images/Dewanshu.png" alt="Profile photo">
       </div>
       <div class=" text-center fonthead text-white font-bold text-4xl pt-14"> 
         I'm Dewanshu Tomar.
@@ -84,7 +85,7 @@
                         <div class="item">
                           <div class="  background: bg-white py-4 px-6 "  style="background-color: rgba(132, 86, 235, 0.6); border-radius: 16px;">
                             <div class="flex justify-center py-4">
-                              <img  style=" width:40%; height:auto " src="./assets/Dewanshu.png" alt="users">
+                              <img  style=" width:40%; height:auto " src="../static/images/Dewanshu.png" alt="users">
                             </div>
                             <p class=" text-white fontpara text-xl pb-4">Jiya</p>
                             <p class=" text-white fontpara text-md pb-10">Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate.</p>
@@ -112,6 +113,15 @@
   <script src="https://cdn.jsdelivr.net/npm/three@0.121.1/build/three.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/three@0.121.1/examples/js/controls/OrbitControls.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
-  <script src="./script.js"></script>
+  <script src="../static/js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const loginButton = document.querySelector('[data-login-url]');
+        loginButton.addEventListener('click', function() {
+            const loginUrl = loginButton.getAttribute('data-login-url');
+            window.location.href = loginUrl;
+        });
+    });
+</script>
 </body>
 </html>
