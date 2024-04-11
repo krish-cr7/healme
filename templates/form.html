@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Payment Page</title>
     <style>
         /* Base styles */
@@ -10,21 +11,33 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-image: url("https://user-images.githubusercontent.com/26748614/96337246-f14d4580-1085-11eb-8793-a86d929e034d.jpg"); /* Add your background image URL here */
+            background-size: cover;
+            background-position: center;
         }
 
         .container {
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 300px; /* Adjust the width as needed */
+            margin: 100px auto; /* Center the container vertically and horizontally */
             padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* White background with some transparency */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
         }
 
         h1 {
             font-size: 1.5rem;
             margin-top: 0;
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-style: normal;
         }
 
         p {
             font-size: 1rem;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
         }
 
         label {
@@ -32,52 +45,28 @@
         }
 
         input[type="text"] {
-            width: 80%;
+            width: 93%; /* Adjusted to take full width */
             padding: 10px;
             margin-bottom: 10px;
             font-size: 1rem;
+            border-radius: 10px;
+
         }
 
         button[type="submit"] {
             padding: 10px 20px;
             font-size: 1rem;
-        }
-
-        /* Media queries */
-        @media only screen and (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-
-            h1 {
-                font-size: 1.3rem;
-            }
-
-            p {
-                font-size: 0.9rem;
-            }
-
-            label {
-                font-size: 0.9rem;
-            }
-
-            input[type="text"] {
-                font-size: 0.9rem;
-            }
-
-            button[type="submit"] {
-                font-size: 0.9rem;
-            }
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <form action="/pay" method="post">
-            <h1>Before we begin, let's set some expectations.</h1>
+            <h1 class="fonthead">Before we begin, let's set some expectations.</h1>
             <p>This space is designed for open expression and genuine exchange of energies.</p>
             <p>This session is completely separate from astrology or tarot card reading. It’s about creating a safe environment where you can freely share and receive guidance, from my learnings during my spiritual journey.</p>
-            <label for="agree-checkbox">
+            <label for="agree-checkbox ">
                 <input type="checkbox" id="agree-checkbox"> I agree to the terms and conditions
             </label>
             <p>Type your name please:</p>
