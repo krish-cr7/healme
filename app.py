@@ -33,11 +33,11 @@ def before_first_request():
 
 @app.route('/')
 def landing_page():
-    open_in_browser = request.args.get('_open_in_browser')
+    # open_in_browser = request.args.get('_open_in_browser')
 
-    # If the "_open_in_browser" parameter is present, redirect the user to the mobile browser
-    if open_in_browser:
-        return redirect("https://thespritualguy.onrender.com", code=302)
+    # # If the "_open_in_browser" parameter is present, redirect the user to the mobile browser
+    # if open_in_browser:
+    #     return redirect("https://thespritualguy.onrender.com", code=302)
     return render_template('landing_page.html')
 
 @app.route('/login')
