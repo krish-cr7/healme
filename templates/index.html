@@ -3,104 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acme Corp Payment Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        h1 {
-            font-size: 1.5rem;
-            margin-top: 0;
-        }
-
-        p {
-            font-size: 1rem;
-            margin-bottom: 10px;
-        }
-
-        button {
-            padding: 10px 20px;
-            font-size: 1rem;
-            background-color: #5cffab;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #4bd391;
-        }
-
-        @media screen and (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-
-            h1 {
-                font-size: 1.3rem;
-            }
-
-            p {
-                font-size: 0.9rem;
-            }
-
-            button {
-                font-size: 0.9rem;
-            }
-        }
-    </style>
+    <title>Form</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to Acme Corp Payment Page</h1>
-        <p>Please read through the information below before proceeding with your payment:</p>
-        <p>This page is designed for processing payments securely. By clicking the "Pay with Razorpay" button below, you will initiate a test transaction for demonstration purposes.</p>
-        <p>Fill in the necessary details and click the button to proceed with the payment.</p>
+    <h1>Payment</h1>
+    <p>Scan the QR code or use the UPI ID to make the payment:</p>
+    <img src="../static/images/web_pay.jpeg" alt="QR Code">
+    <p>UPI ID: 9999780441@paytm</p>
 
-        <button id="rzp-button1">Continue to Payment</button>
-    </div>
+    <h2>Upload Screenshot</h2>
+    <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" id="fileInput" name="file" accept="image/*">
+        <button id="uploadButton" type="submit" disabled>Upload</button>
+    </form>
 
-    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <script>
-         var razorpay_key = "{{ razorpay_key }}";
-
-
-        var options = {
-            "key": razorpay_key,
-            "amount": 50000,
-            "currency": "INR",
-            "name": "Acme Corp",
-            "description": "Test Transaction",
-            "image": "https://example.com/your_logo",
-            "order_id": "{{pdata[1]}}",
-            "callback_url": "/success",
-            "prefill": {
-                "name": "Gaurav Kumar",
-                "email": "gaurav.kumar@example.com",
-                "contact": "9000090000"
-            },
-            "notes": {
-                "address": "Razorpay Corporate Office"
-            },
-            "theme": {
-                "color": "#5cffab"
-            }
-        };
-
-        var rzp1 = new Razorpay(options);
-        document.getElementById('rzp-button1').onclick = function(e){
-            rzp1.open();
-            e.preventDefault();
+        // Function to enable/disable the upload button based on whether a file is selected
+        function toggleUploadButton() {
+            var fileInput = document.getElementById('fileInput');
+            var uploadButton = document.getElementById('uploadButton');
+            uploadButton.disabled = !fileInput.value; // Disable if no file selected
         }
+
+        // Event listener to trigger the toggleUploadButton function when a file is selected
+        document.getElementById('fileInput').addEventListener('change', toggleUploadButton);
     </script>
 </body>
 </html>
