@@ -21,8 +21,14 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        h1, h2 {
+        h1, h2, h3 {
             text-align: center;
+            line-height: 1;
+        }
+
+        h4{
+            text-align: center;
+            line-height: 1;
         }
 
         img {
@@ -74,11 +80,13 @@
 <body>
     <div class="container">
         <h1>Payment</h1>
+        <h4>Please Pay : ₹999</h4>
         <p>Scan the QR code or use the UPI ID to make the payment:</p>
         <img src="../static/images/web_pay.jpeg" alt="QR Code">
         <p>UPI ID: tomar.diwanshu@okicici</p>
-
-        <h2>Upload Screenshot</h2>
+        <h3>Please Pay : ₹999</h3>
+        <h4>And</h4>
+        <h3>Upload Screenshot</h3>
         <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
             <input type="file" id="fileInput" name="file" accept="image/*">
             <label for="fileInput">Choose File</label>
