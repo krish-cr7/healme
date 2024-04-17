@@ -108,17 +108,5 @@
         // Event listener to trigger the toggleUploadButton function when a file is selected
         document.getElementById('fileInput').addEventListener('change', toggleUploadButton);
     </script>
-    <script type="text/javascript">
-        // Check if the "_open_in_browser" parameter is present in the URL query parameters
-        const urlParams = new URLSearchParams(window.location.search);
-        const openInBrowser = urlParams.has('_open_in_browser');
-
-        // If the "_open_in_browser" parameter is present, open the link in the external browser
-        if (openInBrowser) {
-            // Replace 'your_flask_app_url' with the URL of your Flask app
-            const externalURL = 'https://thespritualguy.onrender.com';
-            window.open(externalURL, '_system');
-        }
-    </script>
 </body>
 </html>
