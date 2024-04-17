@@ -4,18 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f3f3;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+        }
+
+        p {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        #fileInput + label {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #uploadButton {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #uploadButton:disabled {
+            background-color: #6c757d;
+            cursor: not-allowed;
+        }
+    </style>
 </head>
 <body>
-    <h1>Payment</h1>
-    <p>Scan the QR code or use the UPI ID to make the payment:</p>
-    <img src="../static/images/web_pay.jpeg" alt="QR Code">
-    <p>UPI ID: 9999780441@paytm</p>
+    <div class="container">
+        <h1>Payment</h1>
+        <p>Scan the QR code or use the UPI ID to make the payment:</p>
+        <img src="../static/images/web_pay.jpeg" alt="QR Code">
+        <p>UPI ID: 9999780441@paytm</p>
 
-    <h2>Upload Screenshot</h2>
-    <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
-        <input type="file" id="fileInput" name="file" accept="image/*">
-        <button id="uploadButton" type="submit" disabled>Upload</button>
-    </form>
+        <h2>Upload Screenshot</h2>
+        <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+            <input type="file" id="fileInput" name="file" accept="image/*">
+            <label for="fileInput">Choose File</label>
+            <button id="uploadButton" type="submit" disabled>Upload</button>
+            <p id="filenameDisplay"></p>
+        </form>
+    </div>
 
     <script>
         // Function to enable/disable the upload button based on whether a file is selected
@@ -23,6 +93,8 @@
             var fileInput = document.getElementById('fileInput');
             var uploadButton = document.getElementById('uploadButton');
             uploadButton.disabled = !fileInput.value; // Disable if no file selected
+            var filenameDisplay = document.getElementById('filenameDisplay');
+            filenameDisplay.textContent = fileInput.value.split('\\').pop();
         }
 
         // Event listener to trigger the toggleUploadButton function when a file is selected
