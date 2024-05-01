@@ -22,10 +22,19 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
-        h1, h2, h3, h4 {
+        h1, h3 {
             text-align: center;
-            line-height: 1;
             font-family: 'Poppins', Arial, sans-serif;
+        }
+
+        h1 {
+            font-size: 32px; /* Larger font size for h1 */
+            font-weight: 600; /* Slightly bold */
+            margin-bottom: 20px; /* Increase margin for h1 */
+        }
+
+        h3 {
+            font-size: 24px; /* Larger font size for h3 */
         }
 
         img {
@@ -39,6 +48,7 @@
             text-align: center;
             margin-bottom: 20px;
             font-family: 'Poppins', Arial, sans-serif;
+            font-size: 18px; /* Font size for paragraphs */
         }
 
         form {
@@ -80,9 +90,9 @@
     <div class="container">
         <h1>Payment Details</h1>
         <h3>Indian Clients</h3>
-        <h4>45 minutes Audio consultation - Rs 999 <br>45 minutes Video consultation - Rs 1350</h4>
+        <p>45 minutes Audio consultation - Rs 999 <br>45 minutes Video consultation - Rs 1350</p>
         <h3>Foreign Clients</h3>
-        <h4>45 minutes Audio consultation - USD $ 27 <br>45 minutes Video consultation - USD $ 36</h4>
+        <p>45 minutes Audio consultation - USD $ 27 <br>45 minutes Video consultation - USD $ 36</p>
         <p>Scan the QR code or use the UPI ID to make the payment:</p>
         <img src="../static/images/web_pay.jpeg" alt="QR Code">
         <p>UPI ID: tomar.diwanshu@okicici</p>
