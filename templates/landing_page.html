@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>The Spiritual guy</title>
+  <title>The Spiritual Guy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="../static/css/style.css" rel="stylesheet"> <!-- Link to your custom style.css file -->
@@ -12,10 +12,10 @@
 
   <!-- for carousel -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/assets/owl.carousel.min.css'>
-<link rel='stylesheet' href='http://themes.audemedia.com/html/goodgrowth/css/owl.theme.default.min.css'><link rel="stylesheet" href="../static/css/style.css">
-<link rel="stylesheet" href="../static/css/style.css">
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/assets/owl.carousel.min.css'>
+  <link rel='stylesheet' href='http://themes.audemedia.com/html/goodgrowth/css/owl.theme.default.min.css'>
+  <link rel="stylesheet" href="../static/css/style.css">
 
   <style>
     body {
@@ -29,147 +29,189 @@
   </style>
 </head>
 <body>
-
-  <div >
+  <div>
     <div class="flex relative" id="canvas_container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; overflow: auto;">
       <!-- Your background content goes here -->
     </div>
-    
-    <div class="absolute inset-0 justify-between z-10 pointer-events-auto italiana-regular ">
-      <div class=" text-center fonthead text-white py-24 pb-80 font-bold text-7xl">Let the<br>Healing Begin</div>
-      <!-- <div class="text-center fontpara bottom-text text-white pt-96  text-2xl">adsfvadfaf dvaf </div> -->
-      <div class="relative pt-96 fontpara text-center text-white   ">
-      <button class="pointer-events-auto py-4 px-8 text-3xl font-light" style="background-color: rgba(132, 86, 235, 0.4); border-radius: 32px;" data-login-url="/login">
-        Book a Session
-      </button>
-    </div>
 
+    <div class="absolute inset-0 justify-between z-10 pointer-events-auto italiana-regular">
+      <!-- Hamburger Menu -->
+      <div class="relative">
+        <div class="flex justify-between items-center p-6">
+          <div class="text-white text-2xl font-bold">The Spiritual Guy</div>
+          <div class="md:hidden">
+            <button id="menu-button" class="text-white focus:outline-none">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center fonthead text-white py-8 pb-72 font-bold text-7xl">Let the<br>Healing Begin</div>
+      <div class="relative pt-96 fontpara text-center text-white">
+        <button class="pointer-events-auto py-4 px-8 text-3xl font-light" style="background-color: rgba(132, 86, 235, 0.4); border-radius: 32px;" data-login-url="/login">
+          Book a Session
+        </button>
+      </div>
 
       <!-- This is About section -->
-      <div  class="px-12">
-        <div class=" text-left fonthead text-white font-bold text-7xl pt-56 "> 
+      <div id="about" class="px-12">
+        <div class="text-left fonthead text-white font-bold text-7xl pt-56"> 
           Hello Beautiful<br>people
         </div>
         <div class="flex justify-center pt-16"> <!-- Center align the image -->
-          <img  src="../static/images/Diwanshu.png" alt="Profile photo">
+          <img src="../static/images/Diwanshu.png" alt="Profile photo">
         </div>
-        <div class=" text-center fonthead text-white font-bold pt-16 text-5xl "> 
+        <div class="text-center fonthead text-white font-bold pt-16 text-5xl"> 
           I'm Diwanshu Tomar
         </div>
-        <div class="  text-center fontpara text-white text-md pt-16 "> 
-          Your go-to Spiritual Guy! Here, I've created a safe space for you to unload the thoughts and emotions that have been weighing on your mind. Think of me as your compassionate healer and mentor, always here to listen you and offer some spiritual insights along the way.
+        <div class="text-center fontpara text-white text-md pt-16"> 
+          Your go-to Spiritual Guy! Here, I've created a safe space for you to unload the thoughts and emotions that have been weighing on your mind. Think of me as your compassionate healer and mentor, always here to listen you and offer some spiritual insights along the way.
         </div>
       </div>
-      <div  class="px-10">
+      <div id="book" class="px-10">
         <!-- Here starts Book a session -->
-        <div class=" text-left fonthead text-white font-bold text-7xl pt-56 pl"> 
+        <div class="text-left fonthead text-white font-bold text-7xl pt-56"> 
           Book a session<br>today!
         </div>
-        <div class="  text-center fontpara text-white text-md pt-36"> 
+        <div class="text-center fontpara text-white text-md pt-36"> 
           Your journey matters, and here, you're supported every step of the way. Feel free to speak from the heart and
         </div>
-        <div class="  text-center fonthead text-white text-5xl pt-20"> 
+        <div class="text-center fonthead text-white text-5xl pt-20"> 
           Let the healing begin.
         </div>
-        <div class=" relative pt-36 flex  items-center justify-center text-white  ">
+        <div class="relative pt-36 flex items-center justify-center text-white">
           <button class="pointer-events-auto py-8 px-12 text-3xl font-normal" style="background-color: rgba(132, 86, 235, 0.4); border-radius: 32px;" data-login-url="/login">
             Book a Session
           </button>
         </div>
-
       </div>
-      <div  class="px-12">
+      <div id="testimonials" class="px-12">
         <!-- Here starts your journey -->
-        <div class=" text-left fonthead text-white font-bold text-7xl pt-96 pb-20"> 
+        <div class="text-left fonthead text-white font-bold text-7xl pt-96 pb-20"> 
           Your journey
         </div>
         <section class="testimonials">
           <div class="container">
-        
-              <div class="row">
-                <div class="col-sm-12">
-                  <div id="customers-testimonials" class="owl-carousel">
-                      
-                          <!--TESTIMONIAL 1 -->
-                          <div class="item">
-                            <div class="  background: bg-white py-4 px-6 "  style="background-color: rgba(132, 86, 235, 0.6); border-radius: 16px;">
-                              <div class="flex justify-center py-4">
-                                <img  style=" width:40%; height:auto " src="../static/images/t1.png" alt="users">
-                              </div>
-                              <p class=" text-white fontpara text-2xl font-normal pb-4">Ketan</p>
-                              <p class=" text-white fontpara text-md pb-10">I would like to thank the spiritual guy for guiding me through my spiritual journey.
-                                He helped me get in touch with my feelings. 
-                                If it wasn’t for him I wouldn’t have crossed the milestone of being true to my feelings and finding that mental peace i was seeking.
-                                You are actually a miracle of human kindness.</p>
-                            </div>
-                            
-                          </div>
-                          <!--END OF TESTIMONIAL 1 -->
-                          <!--TESTIMONIAL 2 -->
-                          <div class="item">
-                            <div class="  background: bg-white py-4 px-6 "  style="background-color: rgba(132, 86, 235, 0.6); border-radius: 16px;">
-                              <div class="flex justify-center py-4">
-                                <img  style=" width:40%; height:auto " src="../static/images/t2.png" alt="users">
-                              </div>
-                              <p class=" text-white fontpara  text-2xl font-normal pb-4">Jiya</p>
-                              <p class=" text-white fontpara text-md pb-10">Attending Mr. Tomar’s session was truly amazing. He's such a beautiful person inside out, and just talking to him felt so therapeutic and healing. He’s doing God’s work. Can't wait for the next session!</p>
-                            </div>
-                            
-                          </div>
-  
-  
-                          <div class="item">
-                            <div class="  background: bg-white py-4 px-6 "  style="background-color: rgba(132, 86, 235, 0.6); border-radius: 16px;">
-                              <div class="flex justify-center py-4">
-                                <img  style=" width:40%; height:auto " src="../static/images/t4.png" alt="users">
-                              </div>
-                              <p class=" text-white fontpara  text-2xl font-normal pb-4">Usha Tomar</p>
-                              <p class=" text-white fontpara text-md pb-10">He is just 28 y/o but his maturity and sense of understanding is way above anyone I have met in my life. So much calmness in his voice and aura, it automatically makes you feel in a comfortable place. Will be connecting with him soon. </p>
-                            </div>
-                            
-                          </div>
-  
-                        <!--TESTIMONIAL 3 -->
-                          <div class="item">
-                            <div class="  background: bg-white py-4 px-6 "  style="background-color: rgba(132, 86, 235, 0.6); border-radius: 16px;">
-                              <div class="flex justify-center py-4">
-                                <img  style=" width:40%; height:auto " src="../static/images/t3.png" alt="users">
-                              </div>
-                              <p class=" text-white fontpara  text-2xl font-normal pb-4">Aashna</p>
-                              <p class=" text-white fontpara text-md pb-10">Diwanshu's approach is warm, empathetic, and deeply insightful. From the beginning, he took the time to understand my goals, fears, and aspirations, creating a safe space for open dialogue and self-reflection.
-                              </p>
-                            </div>
-                            
-                          </div>
-                        </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div id="customers-testimonials" class="owl-carousel">
+                  <!--TESTIMONIAL 1 -->
+                  <div class="item">
+                    <div class="bg-white py-4 px-6" style="background-color: rgba(132, 86, 235, 0.6); border-radius: 16px;">
+                      <div class="flex justify-center py-4">
+                        <img style="width:40%; height:auto" src="../static/images/t1.png" alt="users">
                       </div>
+                      <p class="text-white fontpara text-2xl font-normal pb-4">Ketan</p>
+                      <p class="text-white fontpara text-md pb-10">I would like to thank the spiritual guy for guiding me through my spiritual journey. He helped me get in touch with my feelings. If it wasn’t for him I wouldn’t have crossed the milestone of being true to my feelings and finding that mental peace I was seeking. You are actually a miracle of human kindness.</p>
+                    </div>
+                  </div>
+                  <!--END OF TESTIMONIAL 1 -->
+                  <!--TESTIMONIAL 2 -->
+                  <div class="item">
+                    <div class="bg-white py-4 px-6" style="background-color: rgba(132, 86, 235, 0.6); border-radius: 16px;">
+                      <div class="flex justify-center py-4">
+                        <img style="width:40%; height:auto" src="../static/images/t2.png" alt="users">
+                      </div>
+                      <p class="text-white fontpara text-2xl font-normal pb-4">Jiya</p>
+                      <p class="text-white fontpara text-md pb-10">Attending Mr. Tomar’s session was truly amazing. He's such a beautiful person inside out, and just talking to him felt so therapeutic and healing. He’s doing God’s work. Can't wait for the next session!</p>
+                    </div>
+                  </div>
+                  <!--TESTIMONIAL 3 -->
+                  <div class="item">
+                    <div class="bg-white py-4 px-6" style="background-color: rgba(132, 86, 235, 0.6); border-radius: 16px;">
+                      <div class="flex justify-center py-4">
+                        <img style="width:40%; height:auto" src="../static/images/t3.png" alt="users">
+                      </div>
+                      <p class="text-white fontpara text-2xl font-normal pb-4">Aashna</p>
+                      <p class="text-white fontpara text-md pb-10">Diwanshu's approach is warm, empathetic, and deeply insightful. From the beginning, he took the time to understand my goals, fears, and aspirations, creating a safe space for open dialogue and self-reflection.</p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="bg-white py-4 px-6" style="background-color: rgba(132, 86, 235, 0.6); border-radius: 16px;">
+                      <div class="flex justify-center py-4">
+                        <img style="width:40%; height:auto" src="../static/images/t4.png" alt="users">
+                      </div>
+                      <p class="text-white fontpara text-2xl font-normal pb-4">Usha Tomar</p>
+                      <p class="text-white fontpara text-md pb-10">He is just 28 y/o but his maturity and sense of understanding is way above anyone I have met in my life. So much calmness in his voice and aura, it automatically makes you feel in a comfortable place. Will be connecting with him soon.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
+            </div>
           </div>
-      </section>
-     
-    </div> 
+        </section>
+      </div> 
     </div>
+  </div>
 
-</div>
+  <!-- Modal -->
+  <div id="menu-modal" class="fixed inset-0 hidden bg-gray-900 bg-opacity-75 z-50 flex items-center justify-center">
+    <div class="bg-white p-8 rounded-lg shadow-lg">
+      <div class="flex justify-end">
+        <button id="close-menu-button" class="text-black focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <ul class="mt-4 space-y-4 text-center">
+        <li class="text-2xl text-black" data-login-url="/">Main Page</li>
+        <li class="text-2xl text-black" data-login-url="/aboutus">About us</li>
+        <li class="text-2xl text-black" data-login-url="/contactus">Contact us</li>
+        <li class="text-2xl text-black" data-login-url="/pricing">Pricing details</li>
+        <li class="text-2xl text-black" data-login-url="/terms">Terms and conditions</li>
+        <li class="text-2xl text-black" data-login-url="/privacy">Privacy policy</li>
+        <li class="text-2xl text-black" data-login-url="/refund">Refund policy</li>
+      </ul>
+    </div>
+  </div>
 
-
-<script src="https://cdn.jsdelivr.net/npm/three@0.121.1/build/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.121.1/examples/js/controls/OrbitControls.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
-<script src="../static/js/script.js"></script>
-<script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/owl.carousel.min.js'></script><script  src="../static/js/testimony.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
+  <script src="https://cdn.jsdelivr.net/npm/three@0.121.1/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.121.1/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+  <script src="../static/js/script.js"></script>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/owl.carousel.min.js'></script>
+  <script src="../static/js/testimony.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
       const loginButtons = document.querySelectorAll('[data-login-url]');
       loginButtons.forEach(button => {
-          button.addEventListener('click', function() {
-              const loginUrl = button.getAttribute('data-login-url');
-              window.location.href = loginUrl;
-          });
+        button.addEventListener('click', function() {
+          const loginUrl = button.getAttribute('data-login-url');
+          window.location.href = loginUrl;
+        });
       });
-  });
-</script>
 
+      const menuButton = document.getElementById('menu-button');
+      const closeMenuButton = document.getElementById('close-menu-button');
+      const menuModal = document.getElementById('menu-modal');
+
+      menuButton.addEventListener('click', () => {
+        menuModal.classList.remove('hidden');
+      });
+
+      closeMenuButton.addEventListener('click', () => {
+        menuModal.classList.add('hidden');
+      });
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const menuButton = document.getElementById('menu-button');
+    const closeMenuButton = document.getElementById('close-menu-button');
+    const menuModal = document.getElementById('menu-modal');
+
+    menuButton.addEventListener('click', () => {
+      menuModal.classList.remove('hidden');
+    });
+
+    closeMenuButton.addEventListener('click', () => {
+      menuModal.classList.add('hidden');
+    });
+  });
+  </script>
 </body>
 </html>

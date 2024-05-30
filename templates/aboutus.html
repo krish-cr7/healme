@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About Us - The Spiritual Guy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="../static/css/style.css" rel="stylesheet"> <!-- Link to your custom style.css file -->
+
+  <style>
+    body {
+      margin: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: url("https://user-images.githubusercontent.com/26748614/96337246-f14d4580-1085-11eb-8793-a86d929e034d.jpg");
+      background-size: cover;
+      backdrop-filter: brightness(50%);
+    }
+
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url("https://user-images.githubusercontent.com/26748614/96337246-f14d4580-1085-11eb-8793-a86d929e034d.jpg"); /* Add your background image URL here */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            max-width: 360px; /* Adjust the width as needed */
+            margin: 100px auto; /* Center the container vertically and horizontally */
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8); /* White background with some transparency */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-top: 0;
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        p {
+            font-size: 0.9rem;
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        label {
+            font-size: 1rem;
+        }
+
+        input[type="text"] {
+            width: 93%; /* Adjusted to take full width */
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            border-radius: 10px;
+
+        }
+
+        button[type="submit"] {
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 10px;
+        }
+  </style>
+</head>
+<body>
+  <!-- Hamburger Menu -->
+  <div class="relative">
+    <div class="flex justify-between items-center p-6">
+      <div class="text-white text-2xl font-bold">The Spiritual Guy</div>
+      <div class="md:hidden">
+        <button id="menu-button" class="text-white focus:outline-none">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="menu-modal" class="fixed inset-0 hidden bg-gray-900 bg-opacity-75 z-50 flex items-center justify-center">
+    <div class="bg-white p-8 rounded-lg shadow-lg">
+      <div class="flex justify-end">
+        <button id="close-menu-button" class="text-black focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <ul class="mt-4 space-y-4 text-center">
+        <li class="text-2xl text-black" data-login-url="/login">About us</li>
+        <li class="text-2xl text-black" data-login-url="/aboutus">About us</li>
+        <li class="text-2xl text-black" data-login-url="/contactus">Contact us</li>
+        <li class="text-2xl text-black" data-login-url="/pricing">Pricing details</li>
+        <li class="text-2xl text-black" data-login-url="/terms">Terms and conditions</li>
+        <li class="text-2xl text-black" data-login-url="/privacy">Privacy policy</li>
+        <li class="text-2xl text-black" data-login-url="/refund">Refund policy</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <!-- <div class="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center">
+    <div class="bg-gray-800 p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
+      <h1 class="text-5xl font-bold mb-6 text-center">About Us</h1>
+      <p class="text-lg text-center">
+        Welcome to The Spiritual Guy! Here, we believe in the power of healing and spiritual growth. Our mission is to provide a safe and supportive space for individuals to explore their spiritual journey, find peace, and connect with their true selves. Our compassionate healer and mentor, Diwanshu Tomar, is dedicated to guiding you through your personal path with empathy and insight. Join us to embark on a journey of self-discovery and spiritual enlightenment.
+      </p>
+    </div>
+  </div> -->
+  <div class="container" >
+    <h1 class="fontpara" style="text-align: center;">About Us</h1>
+    <p>I am dedicated to helping individuals achieve their personal and professional goals through personalized one-on-one counseling sessions. My mission is to guide you towards self-discovery, growth, and enlightenment. With a compassionate and tailored approach, I am committed to empowering you to overcome obstacles and reach your full potential.</p>
+
+    <p>As a certified spiritual healer, I integrate holistic practices to address your unique needs and challenges. My approach is centered on creating a safe and supportive environment where you can explore your inner self and find clarity.</p>
+    </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="../static/js/testimony.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.121.1/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.121.1/examples/js/controls/OrbitControls.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+  <script src="../static/js/script.js"></script>
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/owl.carousel.min.js'></script>
+  <script>
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      const loginButtons = document.querySelectorAll('[data-login-url]');
+      loginButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const loginUrl = button.getAttribute('data-login-url');
+          window.location.href = loginUrl;
+        });
+      });
+      const menuButton = document.getElementById('menu-button');
+      const closeMenuButton = document.getElementById('close-menu-button');
+      const menuModal = document.getElementById('menu-modal');
+
+      menuButton.addEventListener('click', () => {
+        menuModal.classList.remove('hidden');
+      });
+
+      closeMenuButton.addEventListener('click', () => {
+        menuModal.classList.add('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
