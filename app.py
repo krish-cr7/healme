@@ -8,6 +8,7 @@ load_dotenv()
 app = Flask(__name__)
 app.secret_key = os.environ.get('SECRET_KEY')
 
+
 # Razorpay Configuration
 razorpay_client = razorpay.Client(auth=(os.environ.get('RAZORPAY_KEY_ID'), os.environ.get('RAZORPAY_KEY_SECRET')))
 
@@ -36,6 +37,25 @@ def login():
 #     session['logged_in'] = False
 #     session['screenshot_uploaded'] = False
 #     return redirect(url_for('landing_page'))
+
+@app.route('/aboutus')
+def aboutus():
+    return render_template('aboutus.html')
+@app.route('/contactus')
+def contactus():
+    return render_template('contactus.html')
+@app.route('/pricing')
+def pricing():
+    return render_template('pricing.html')
+@app.route('/privacy')
+def privacy():
+    return render_template('privacy.html')
+@app.route('/refund')
+def refund():
+    return render_template('refund.html')
+@app.route('/terms')
+def terms():
+    return render_template('terms.html')
 
 @app.route('/form')
 def form():
